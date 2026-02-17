@@ -4,11 +4,10 @@ public abstract class Service {
     protected int serviceID;
     protected boolean isActive;
 
-
     public Service(String serviceName, int serviceID) {
         this.serviceName = serviceName;
         this.serviceID = serviceID;
-        this.isActive = false; // Default state
+        this.isActive = false;
     }
 
     public void activateService() {
