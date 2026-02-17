@@ -1,23 +1,20 @@
-public class ConsultationService extends Service
-        implements Billable {
+public class ConsultationService extends Service implements Billable {
 
-    // TODO: constructor
-
+    public ConsultationService(String serviceName, int serviceID) {
+        super(serviceName, serviceID);
+    }
 
     @Override
     public void performService() {
-
-        // TODO:
-        // check active
-        // print consultation message
-
+        if (isActive()) {
+            System.out.println("Connecting with a consultant...");
+        } else {
+            System.out.println("Service " + getServiceName() + " is inactive.");
+        }
     }
 
     @Override
     public void generateBill() {
-
-        // TODO:
-        // print billing message
-
+        System.out.println("Billing for consultation hours...");
     }
 }

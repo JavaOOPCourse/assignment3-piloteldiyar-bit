@@ -1,22 +1,17 @@
 public class Admin extends User {
 
-    // TODO: constructor
-
+    public Admin(String username, int userID) {
+        super(username, userID);
+    }
 
     @Override
     public void manageService(Service s) {
-
-        // TODO:
-        // print admin managing message
-
+        System.out.println("Admin " + username + " is managing " + s.getServiceName() + "...");
     }
 
     @Override
     public void useService(Service s) {
-
-        // TODO:
-        // print admin using message
-        // call performService()
-
+        System.out.println("Admin executing test on " + s.getServiceName() + "...");
+        s.performService();
     }
 }
